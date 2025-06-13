@@ -49,7 +49,7 @@ portfolio-project/
 │   └── app.py
 │
 ├── data/
-│   └── projects_data.csv
+│   └── projects_data_with_links.csv
 │
 └── Dockerfile
 ```
@@ -111,6 +111,7 @@ The website is deployed on Render. To deploy your own version, follow these step
 ## Contact
 
 Feel free to contact me through:
-- **Email**: [21522557@gm.edu.vn](mailto:21522557@gm.edu.vn)
+- **Email**: [tranthanhsonhaiphong@gmail.com](mailto:tranthanhsonhaiphong@gmail.com)
+- **Phone**: +84&nbsp;886&nbsp;891&nbsp;966
 - **GitHub**: [https://github.com/FOX2920/](https://github.com/FOX2920/)
-- **LinkedIn**: [https://www.linkedin.com/in/s%C6%A1n-tr%E1%BA%A7n-thanh-58498a292/]([https://www.linkedin.com/in/your-username](https://www.linkedin.com/in/s%C6%A1n-tr%E1%BA%A7n-thanh-58498a292/))
+- **LinkedIn**: [https://www.linkedin.com/in/s%C6%A1n-tr%E1%BA%A7n-thanh-58498a292/](https://www.linkedin.com/in/s%C6%A1n-tr%E1%BA%A7n-thanh-58498a292/)
