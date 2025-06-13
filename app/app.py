@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, jsonify, request
-import pandas as pd
+import csv
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -9,8 +9,9 @@ CORS(app)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 csv_path = os.path.join(BASE_DIR, '../data/projects_data_with_links.csv')
 
-df = pd.read_csv(csv_path)
-projects = df.to_dict('records')
+with open(csv_path, newline='', encoding='utf-8') as f:
+    reader = csv.DictReader(f)
+    projects = list(reader)
 
 @app.route('/')
 def index():
@@ -35,4 +36,5 @@ def submit_contact():
     return jsonify({"success": True, "message": "Thank you for your message!"})
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)

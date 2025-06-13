@@ -49,7 +49,7 @@ portfolio-project/
 │   └── app.py
 │
 ├── data/
-│   └── projects_data.csv
+│   └── projects_data_with_links.csv
 │
 └── Dockerfile
 ```
@@ -78,7 +78,14 @@ portfolio-project/
    python app/app.py
    ```
 
-4. Open your browser and go to `http://localhost:5000` to see the website.
+   The app listens on port 5000 by default. You can override this by setting the
+   `PORT` environment variable before running the command:
+   ```bash
+   PORT=8000 python app/app.py
+   ```
+
+4. Open your browser and go to `http://localhost:5000` (or your chosen port) to
+   see the website.
 
 ## Docker Setup
 
@@ -106,6 +113,8 @@ The website is deployed on Render. To deploy your own version, follow these step
    ```bash
    python app/app.py
    ```
+   Render automatically sets the `PORT` environment variable, which the app uses
+   when starting.
 4. Deploy the service and your website will be live.
 
 ## Contact
